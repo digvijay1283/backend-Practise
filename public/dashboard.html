@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - CRUD Operations</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <header class="dashboard-header">
+            <h1>Dashboard</h1>
+            <div class="user-info">
+                <span id="welcomeMessage">Welcome, <span id="usernameDisplay"></span>!</span>
+                <button id="logoutBtn" class="btn btn-secondary">Logout</button>
+            </div>
+        </header>
+
+        <main class="dashboard-main">
+            <section class="item-form-section">
+                <h2 id="formTitle">Create New Item</h2>
+                <form id="itemForm">
+                    <input type="hidden" id="itemId">
+                    <div class="form-group">
+                        <label for="itemTitle">Title:</label>
+                        <input type="text" id="itemTitle" name="title" placeholder="Enter item title" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="itemDescription">Description:</label>
+                        <textarea id="itemDescription" name="description" placeholder="Enter item description" rows="4"></textarea>
+                    </div>
+                    <div class="form-buttons">
+                        <button type="submit" class="btn btn-primary" id="submitBtn">Create Item</button>
+                        <button type="button" class="btn btn-secondary" id="cancelBtn" style="display: none;">Cancel</button>
+                    </div>
+                </form>
+            </section>
+
+            <section class="items-list-section">
+                <h2>Your Items</h2>
+                <div id="itemsList" class="items-list">
+                    <!-- Items will be loaded here dynamically -->
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>
